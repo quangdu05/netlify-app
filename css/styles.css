@@ -1,0 +1,341 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f8f3eb;
+  color: #3b3b3b;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 1000;
+  font-size: 0.9rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #3b3b3b;
+  text-transform: lowercase;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-actions .btn {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #3b3b3b;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #3b3b3b;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.nav-actions .btn:hover {
+  background: #00796b;
+  color: white;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('https://media-cdn-v2.laodong.vn/storage/newsportal/2023/8/26/1233821/Giai-Nhi-1--Nang-Tre.jpg')
+    no-repeat center center/cover;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Our Story Section */
+.our-story {
+  display: flex;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  align-items: center;
+  background: #f8f3eb;
+}
+
+.story-text {
+  flex: 1;
+}
+
+.story-heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.story-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.story-text h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #5a5a5a;
+}
+
+.story-text h3 {
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: #3b3b3b;
+}
+
+.story-text p {
+  line-height: 1.8;
+  color: #5a5a5a;
+  margin-bottom: 1.5rem;
+}
+
+.story-text .btn {
+  padding: 0.6rem 1.5rem;
+  border: 1px solid #00796b;
+  color: #00796b;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.story-text .btn:hover {
+  background: #00796b;
+  color: white;
+}
+
+.story-image {
+  flex: 1;
+}
+
+.story-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Locations Section */
+.locations {
+  display: flex;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  align-items: center;
+}
+
+.location-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.location-text {
+  flex: 1;
+}
+
+.location-heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.location-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.location-text h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #5a5a5a;
+}
+
+.location-text h3 {
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: #3b3b3b;
+}
+
+.location-text p {
+  line-height: 1.8;
+  color: #5a5a5a;
+  margin-bottom: 1.5rem;
+}
+
+.location-text .btn {
+  padding: 0.6rem 1.5rem;
+  border: 1px solid #00796b;
+  color: #00796b;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.location-text .btn:hover {
+  background: #00796b;
+  color: white;
+}
+
+/* Menu Section */
+.menu {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #f8f3eb;
+}
+
+.menu h2 {
+  font-size: 2rem;
+  color: #00796b;
+  margin-bottom: 2rem;
+}
+
+.menu-slider {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.menu-slider::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Chrome */
+}
+
+.menu-item {
+  min-width: 250px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #f8f3eb;
+  padding: 4rem 2rem;
+  font-size: 0.9rem;
+  color: #3b3b3b;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Follow Us Section */
+.follow-us h3 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #3b3b3b;
+}
+
+.social-icons a {
+  margin-right: 1rem;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+
+.social-icons img {
+  width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+.social-icons img:hover {
+  filter: grayscale(0%);
+}
+
+/* Location Section */
+.location h3 {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #3b3b3b;
+}
+
+.location p {
+  margin: 0.5rem 0;
+  color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links h3 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #3b3b3b;
+}
+
+.quick-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.quick-links li {
+  margin-bottom: 0.5rem;
+}
+
+.quick-links a {
+  text-decoration: none;
+  color: #00796b;
+  transition: color 0.3s;
+}
+
+.quick-links a:hover {
+  color: #004d40;
+}
+
+/* Copyright Section */
+.copyright {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #5a5a5a;
+}
+
+.copyright p {
+  margin: 0.2rem 0;
+}

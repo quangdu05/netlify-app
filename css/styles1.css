@@ -1,0 +1,295 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f8f3eb;
+  color: #3b3b3b;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 1000;
+  font-size: 0.9rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #3b3b3b;
+  text-transform: lowercase;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-actions .btn {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #3b3b3b;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #3b3b3b;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.nav-actions .btn:hover {
+  background: #00796b;
+  color: white;
+}
+
+.hero {
+  height: 100vh;
+  background: url('https://media-cdn-v2.laodong.vn/storage/newsportal/2023/8/26/1233821/Giai-Nhi-1--Nang-Tre.jpg')
+    no-repeat center center/cover;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Founder Section */
+.founder-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  align-items: center;
+}
+
+.founder-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.image-item {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text-content {
+  padding: 1rem;
+}
+
+.text-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #3b3b3b;
+}
+
+.text-content p {
+  margin-bottom: 1.5rem;
+  color: #5a5a5a;
+}
+
+@media (max-width: 768px) {
+  .founder-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Inspiration Section */
+.inspiration-section {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background-color: #f8f3eb;
+}
+
+.inspiration-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Left Image */
+.image-left img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Right Text */
+.text-right {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.text-right p {
+  line-height: 1.8;
+  color: #5a5a5a;
+  margin-bottom: 1.5rem;
+}
+
+.text-right em {
+  font-style: italic;
+  color: #3b3b3b;
+}
+
+/* Bottom Right Image */
+.image-right {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.image-right img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .inspiration-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .text-right {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .image-right {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #f8f3eb;
+  padding: 4rem 2rem;
+  font-size: 0.9rem;
+  color: #3b3b3b;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Follow Us Section */
+.follow-us h3 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #3b3b3b;
+}
+
+.social-icons a {
+  margin-right: 1rem;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+
+.social-icons img {
+  width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+.social-icons img:hover {
+  filter: grayscale(0%);
+}
+
+/* Location Section */
+.location h3 {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #3b3b3b;
+}
+
+.location p {
+  margin: 0.5rem 0;
+  color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links h3 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #3b3b3b;
+}
+
+.quick-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.quick-links li {
+  margin-bottom: 0.5rem;
+}
+
+.quick-links a {
+  text-decoration: none;
+  color: #00796b;
+  transition: color 0.3s;
+}
+
+.quick-links a:hover {
+  color: #004d40;
+}
+
+/* Copyright Section */
+.copyright {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #5a5a5a;
+}
+
+.copyright p {
+  margin: 0.2rem 0;
+}
