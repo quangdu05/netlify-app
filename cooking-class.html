@@ -157,8 +157,13 @@
 
             <label for="notes">additional comment</label>
             <textarea id="notes" name="notes" rows="3"></textarea>
+            <label for="location">chọn địa điểm</label>
+            <select id="location" name="Địa điểm" required>
+              <option value="">Đang tải địa điểm...</option>
+            </select>
 
             <button type="submit">join now ➜</button>
+            
           </form>
         </div>
       </div>
@@ -205,5 +210,27 @@
         </div>
       </div>
     </footer>
+    <script>
+      async function loadLocations() {
+        try {
+          const res = await fetch("https://raw.githubusercontent.com/quangdu05/netlify-app/refs/heads/main/locations.json"); // ← thay URL này bằng URL JSON thật của bạn
+          const data = await res.json();
+    
+          const select = document.getElementById("location");
+          select.innerHTML = '<option value="">-- chọn địa điểm --</option>';
+    
+          data.forEach(loc => {
+            const option = document.createElement("option");
+            option.value = loc.name + " - " + loc.address;
+            option.textContent = `${loc.name} (${loc.address})`;
+            select.appendChild(option);
+          });
+        } catch (err) {
+          console.error("Không tải được địa điểm:", err);
+        }
+      }
+    
+      loadLocations();
+    </script>    
   </body>
 </html>
